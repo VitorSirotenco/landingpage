@@ -1,0 +1,112 @@
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'inter';
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 30% 30%; /* divide a tela em colunas invisiveis*/
+}
+
+.principal{
+    background-image: url("img/Background.png"); /*quando a imagem so tem função decorativa ela é colocada no CSS diretamente*/
+    background-repeat: no-repeat;
+    background-size: contain; /*para ocupar toda a seção*/
+    align-items: center;
+    text-align: center;
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1em; /* 1 em equivale a 16 px*/
+    display: block;
+    margin-bottom: 1em;
+
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+
+}
+
+.container__imagem{
+    margin: 2em 0 2em 0;
+}
+
+.container__caixa{
+    margin: 0em 6em;
+}
+
+
+.secundario__imagem{
+    width: 70%;
+}
+
+.secundario{
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    margin: 0 13em;
+}
+
+.descricao__titulo{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.descricao__texto{
+    font-size: 15px;
+    color: var(--cinza-secundario);
+}
+
+.terciario{
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    margin: 0 8em;
+}
+
+.terciario__imagem{
+    width: 80%;
+    margin: 0 12em 0 5em;
+}
+
+.descricao__paragrafo{
+    color: var(--cinza-secundario);
+    font-size: 16px;
+    margin-bottom: 1.5em;
+}
+
+.botao_terciario{
+    display: inline-block;
+}

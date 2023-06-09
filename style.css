@@ -110,3 +110,57 @@ body{
 .botao_terciario{
     display: inline-block;
 }
+
+.lista__dispositivos{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.rodape__lista{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 2.5em;
+    margin-bottom: 4em;
+    font-size: 16px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 0;
+}
+
+.rodape__logo{
+    margin-bottom: 2em;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.container__botao:hover{
+    background-color:  #3e88e2;
+}

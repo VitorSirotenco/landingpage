@@ -1,4 +1,4 @@
-:root{
+:root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
@@ -6,161 +6,277 @@
     --fonte-principal: 'inter';
 }
 
-body{
+body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.container__titulo{
-    font-size: 28px;
+.container__titulo {
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
-.container{
+.container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 40% 30% 30%; /* divide a tela em colunas invisiveis*/
+    grid-template-columns: 40% 30% 30%;
+    /* divide a tela em colunas invisiveis*/
 }
 
-.principal{
-    background-image: url("img/Background.png"); /*quando a imagem so tem função decorativa ela é colocada no CSS diretamente*/
+.principal {
+    background-image: url("img/Background.png");
+    /*quando a imagem so tem função decorativa ela é colocada no CSS diretamente*/
     background-repeat: no-repeat;
-    background-size: contain; /*para ocupar toda a seção*/
+    background-size: contain;
+    /*para ocupar toda a seção*/
     align-items: center;
     text-align: center;
 }
 
-.container__botao{
+.container__botao {
     background-color: var(--botao-azul);
     color: var(--branco-principal);
     text-decoration: none;
     border-radius: 5px;
-    padding: 1em; /* 1 em equivale a 16 px*/
+    padding: 1rem;
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 
 }
 
-.botao_secundario{
+.botao_secundario {
     background-color: transparent;
     border: 2px solid var(--branco-principal);
-    
+
 }
 
-.container__aviso{
-    font-size: 12px;
+.container__aviso {
+    font-size: 0.9rem;
     color: var(--cinza-secundario);
 
 }
 
-.container__imagem{
-    margin: 2em 0 2em 0;
+.container__imagem {
+    margin: 2rem 0 2rem 0;
 }
 
-.container__caixa{
-    margin: 0em 6em;
+.container__caixa {
+    margin: 0em 6rem;
 }
 
 
-.secundario__imagem{
+.secundario__imagem {
     width: 70%;
 }
 
-.secundario{
+.secundario {
     align-items: center;
     grid-template-columns: 50% 50%;
-    margin: 0 13em;
+    margin: 0 13rem;
 }
 
-.descricao__titulo{
-    font-size: 48px;
+.descricao__titulo {
+    font-size: 4rem;
     font-weight: 700;
 }
 
-.descricao__texto{
-    font-size: 15px;
+.descricao__texto {
+    font-size: 1rem;
     color: var(--cinza-secundario);
 }
 
-.terciario{
+.terciario {
     align-items: center;
     grid-template-columns: 50% 50%;
-    margin: 0 8em;
+    margin: 0 8rem;
 }
 
-.terciario__imagem{
+.terciario__imagem {
     width: 80%;
-    margin: 0 12em 0 5em;
+    margin: 0 12rem 0 5rem;
 }
 
-.descricao__paragrafo{
+.descricao__paragrafo {
     color: var(--cinza-secundario);
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 1.5em;
 }
 
-.botao_terciario{
+.botao_terciario {
     display: inline-block;
 }
 
-.lista__dispositivos{
+.lista__dispositivos {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin: 5em 0;
+    margin: 5rem 0;
 }
 
-.dispositivos{
+.dispositivos {
     text-align: center;
 }
 
-.dispositivos__titulo{
-    font-size: 48px;
+.dispositivos__titulo {
+    font-size: 4rem;
     color: var(--branco-principal);
 }
 
-.lista__item{
-    font-size: 32px;
+.lista__item {
+    font-size: 2rem;
     color: var(--branco-principal);
 }
 
-.lista__link a{
+.lista__link a {
     text-decoration: none;
     color: var(--branco-principal);
 }
 
-.rodape__lista{
+.rodape__lista {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    margin-top: 1em;
-    gap: 2.5em;
-    margin-bottom: 4em;
-    font-size: 16px;
+    margin-top: 1rem;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    font-size: 1rem;
     color: var(--branco-principal);
 }
 
 .rodape {
     text-align: center;
-    margin: 5em 0;
+    margin: 5rem 0;
 }
 
-.rodape__logo{
-    margin-bottom: 2em;
+.rodape__logo {
+    margin-bottom: 2rem;
 }
 
-.lista__link a:hover{
+.lista__link a:hover {
     color: var(--botao-azul);
 }
 
-.container__botao:hover{
-    background-color:  #3e88e2;
+.container__botao:hover {
+    background-color: #3e88e2;
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .principal {
+        background-image: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container__imagem {
+        margin-bottom: 9rem;
+        margin-top: 5rem;
+
+    }
+
+    .container__titulo {
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .secundario {
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        margin: 0 5rem 0 15rem;
+        justify-content: center;
+    }
+
+    .descricao__titulo {
+        font-size: 2rem;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .container__descricao {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 35rem;
+    }
+
+    body {
+        background-color: var(--cor-de-fundo);
+        color: var(--branco-principal);
+        font-family: var(--fonte-principal);
+        font-size: 1rem;
+        font-weight: 400;
+        overflow-x: hidden;
+        box-sizing: border-box;
+
+    }
+
+    .secundario__imagem {
+        width: 20rem;
+    }
+
+    .terciario {
+        text-align: center;
+        display: flex;
+        margin: 0 10rem 0 9rem;
+    }
+
+    .terciario__imagem {
+        width: 300%;
+        margin: 0rem 0rem 0rem 2rem;
+    }
+
+    .dispositivos__titulo{
+        font-size: 1rem;
+        margin-left: 10.5rem;
+
+    }
+
+    .imagem__dispositivo{
+        width: 100%;
+    }
+
+    .lista__item{
+        font-size: 0.7rem;
+        margin-left: auto;
+    }
+
+    .lista__dispositivos{
+        margin-left: 10rem;
+    }
+
+    .rodape__logo{
+        width: auto;
+        margin-left: 10rem;
+    }
+
+    .lista__link a {
+        font-size: 0.5rem;
+    }
+
+    .descricao__paragrafo{
+        font-size: 0.7rem;
+        margin-left: 10rem;
+    }
 }
